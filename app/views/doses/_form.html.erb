@@ -1,5 +1,6 @@
-<%= simple_form_for [cocktail, dose], :html => { class: 'form'} do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.all.order(:name), prompt: "choose an ingredient" %>
-  <%= f.submit "Add to Cocktail", class: "btn btn-primary" %>
-<% end %>
+  <%= simple_form_for [cocktail, dose], :html => { class: 'form'} do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient, collection: Ingredient.all.order(:name), prompt: "choose an ingredient" %>
+    <%= f.submit "Add to Cocktail", class: "btn btn-primary" %>
+  <% end %>
+
